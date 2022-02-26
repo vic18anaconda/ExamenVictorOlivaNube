@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  servidorweb2:
+    image: webdevops/php-apache
+    # build es en el file
+    container_name: servidorweb2
+    volumes:
+      - ./app:/app
+    ports:
+      - 83:80
+
+# unir todo en un solo archivo 
+# editar todo lo que me envio ruben

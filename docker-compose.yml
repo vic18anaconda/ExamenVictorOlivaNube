@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  servidorbd:
+    image: mariadb:10.7.1
+    container_name: servidordb
+    environment:
+      - MYSQL_ROOT_PASSWORD=anaconda/26/mangosta
+    volumes:
+      - ./db:/var/lib/mysql
+      - ./db_config:/etc/mysql/conf.d
+    ports:
+      - 3338:3306
+
+
